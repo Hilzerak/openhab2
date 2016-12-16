@@ -1,0 +1,7 @@
+1=offen
+0=geschlossen
+2=gekippt
+NULL=undefiniert
+CLOSED=geschlossen
+OPEN=offen
+-=UNKOWN

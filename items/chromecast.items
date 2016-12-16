@@ -1,0 +1,4 @@
+Group gChromecast
+Dimmer Chromecast_Volume 	( gChromecast ) 	{ channel="chromecast:audio:myCC:volume" }
+Player Chromecast_Music 	( gChromecast ) 	{ channel="chromecast:audio:myCC:control" }
+String Chromecast_Playuri 	( gChromecast ) 	{ channel="chromecast:audio:myCC:playuri" }

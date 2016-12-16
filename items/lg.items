@@ -1,0 +1,12 @@
+Group LGTV
+
+Switch LgTvPower                        "Power Command"                 ( OG_Living, LGTV )     {lgtv="ON:wohnzimmer:POWER"}
+Switch LgTvMute                         "Mute"                          ( OG_Living, LGTV )     {lgtv="ON:wohnzimmer:KEY_MUTE, OFF:wohnzimmer:KEY_MUTE"}
+Number LgTvVolume                       "lgVolume [%.1f]"               ( OG_Living, LGTV )     {lgtv="INIT:wohnzimmer:VOLUME_CURRENT, INCREASE:wohnzimmer:VOLUME_UP, DECREASE:wohnzimmer:VOLUME_DOWN, *:wohnzimmer:VOLUME_SET"}
+Number LgTvChannel                      "Channel [%.1f]"                ( OG_Living, LGTV )     {lgtv="INIT:wohnzimmer:CHANNEL_CURRENTNUMBER, INCREASE:wohnzimmer:CHANNEL_UP, DECREASE:wohnzimmer:CHANNEL_DOWN, *:wohnzimmer:CHANNEL_SET" }
+String LgTvChannelName                  "Channelname [%s]"              ( OG_Living, LGTV )     {lgtv="INIT:wohnzimmer:CHANNEL_CURRENTNAME"}
+String LgTvGetChannels                  "getchannels [%s]"              ( OG_Living, LGTV )     {lgtv="INIT:wohnzimmer:GET_CHANNELS, ON:wohnzimmer:GET_CHANNELS"}
+String LgTvGetApps                      "getapps [%s]"                  ( OG_Living, LGTV )     {lgtv="INIT:wohnzimmer:GET_APPS, ON:wohnzimmer:GET_APPS"}
+String LgTvAppExecute                   "excuteapp"                     ( OG_Living, LGTV )     {lgtv="*:wohnzimmer:APP_EXECUTE"}
+String LgTvAppTerminate                 "terminateapp"                  ( OG_Living, LGTV )     {lgtv="*:wohnzimmer:APP_TERMINATE"}
+Switch LgTvConnStatus                   "connstatus "                   ( OG_Living, LGTV )     {lgtv="*:wohnzimmer:CONNECTION_STATUS"} 

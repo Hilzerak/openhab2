@@ -1,0 +1,21 @@
+rule "Xtrend_Mute"
+    when
+        Item Xtrend_sendMute received command
+    then
+        switch(receivedCommand) {
+            case ON :  sendHttpGetRequest("http://192.168.178.21:80/web/vol?set=mute")
+            case OFF : sendHttpGetRequest("http://192.168.178.21:80/web/vol?set=mute")
+}
+end
+
+
+rule "Xtrend_Standby"
+    when
+        Item Xtrend_Standby received command
+    then
+        switch(receivedCommand) {
+            case ON :  sendHttpGetRequest("http://192.168.178.21:80/web/powerstate?newstate=4")
+            case OFF : sendHttpGetRequest("http://192.168.178.21:80/web/powerstate?newstate=5")
+}
+end
+

@@ -1,0 +1,16 @@
+Strategies {
+    everyMinute : "0 * * * * ?"
+    every15Mins : "0 0,15,30,45 * * * ?"
+    everyHour : "0 0 * * * ?"
+    everyDay : "0 0 0 * * ?"
+    default = everyChange
+}
+
+
+Items {
+	INET_* : strategy = everyChange, restoreOnStartup
+	* : strategy = everyChange
+	Temperature_*, Humidity_*, Pressure_* : strategy = every15Mins, restoreOnStartup
+	OG_Bath_Thermostat_*, OG_Kitchen_Thermostat_*, OG_Bed_Thermostat_*, OG_Bath_Window*  : strategy = everyChange, restoreOnStartup	
+}
+

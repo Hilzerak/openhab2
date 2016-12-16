@@ -1,0 +1,5 @@
+Group gXtrend
+String  Xtrend_Sendung  "Aktuelle Sendung [%s]"  <projector_benq>   ( gXtrend )	{ http="<[http://192.168.178.21:80/web/getcurrent:3000:REGEX(.*?<e2eventname>(.*?)</e2eventname>.*)]" }
+String  Xtrend_Kanal    "Sender [%s]"            <projector_benq>   ( gXtrend )	{ http="<[http://192.168.178.21:80/web/getcurrent:3000:REGEX(.*?<e2servicename>(.*?)</e2servicename>.*)]" }
+Switch  Xtrend_sendMute "Mute"  		 <soundvolume_mute> ( gXtrend )
+Switch	Xtrend_Standby	"Standby / Aufwecken"	 <switch>	    ( gXtrend ) { http="<[http://192.168.178.21:80/web/powerstate:3000:REGEX(.*?<e2instandby>(.*?)</e2instandby>.*)]" }

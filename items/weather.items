@@ -1,0 +1,13 @@
+Number Temperature_coburg	"Temperatur [%.1f] °C" 		<temperature>		{ channel="yahooweather:weather:ce6e5b71:temperature" }
+Number Humidity_coburg 		"Luftfeuchtigkeit [%.1f]" 	<rain> 			{ channel="yahooweather:weather:ce6e5b71:humidity" }
+Number Pressure_coburg 		"Luftdruck [%.1f]"		<sun_clouds> 		{ channel="yahooweather:weather:ce6e5b71:pressure" }
+
+
+Number Temperature_ebern 	"Temperatur [%.1f] °C" 		<temperature>		{ channel="yahooweather:weather:aba290c3:temperature" }
+Number Humidity_ebern 		"Luftfeuchtigkeit [%.1f]"	<rain> 			{ channel="yahooweather:weather:aba290c3:humidity" }
+Number Pressure_ebern 		"Luftdruck [%.1f]"		<sun_clouds>		{ channel="yahooweather:weather:aba290c3:pressure" }
+
+Number Temperature_siegen 	"Temperatur [%.1f] °C" 		<temperature>		{ channel="yahooweather:weather:465c63bf:temperature" }
+Number Humidity_siegen 		"Luftfeuchtigkeit [%.1f]"	<rain> 			{ channel="yahooweather:weather:465c63bf:humidity" }
+Number Pressure_siegen 		"Luftdruck [%.1f]"		<sun_clouds>		{ channel="yahooweather:weather:465c63bf:pressure" }
+

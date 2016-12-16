@@ -1,0 +1,1 @@
+DateTime CurrentDate  "Heutiges Datum [%1$tA, %1$td.%1$tm.%1$tY]"	<calendar>	{ channel="ntp:ntp:local:dateTime" }
