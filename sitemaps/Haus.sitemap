@@ -1,170 +1,180 @@
-sitemap	Haus	label="Hausverwaltung"
+sitemap Haus    label="Hausverwaltung"
 {
-	Frame {
-		Grou	item=gOG	label="Obergeschoss"	icon="firstfloor"
-		{
-		Group	item=OG_Bed
-			{
-			Frame	label="Heizung"{
-			Switch		item=OG_Bed_Thermostat_Mode		mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
-			Setpoint	item=OG_Bed_Thermostat_set_temp		minValue=4.5 maxValue=32 step=0.5
-			Text		item=OG_Bed_Thermostat_actual_temp
-			Switch		item=OG_Bed_Thermostat_Battery
-			Text		item=OG_Bath_Thermostat_valve
-                        Text		item=OG_Bed_Window			label="Schlafzimmerfenster"
-				}
-			}
+        Frame {
+                Group    item=gOG        label="Obergeschoss"    icon="firstfloor"
+                {
 
+                Group   item=OG_Bed
+                        {
 
-
-
-
-
-		Group	item=OG_Kitchen
-			{
-			Frame	label="Heizung"{
-                        Switch	item=OG_Kitchen_Thermostat_Mode			mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
-                        Setpoint	item=OG_Kitchen_Thermostat_set_temp	minValue=4.5 maxValue=32 step=0.5
-                        Text		item=OG_Kitchen_Thermostat_actual_temp
-                        Switch		item=OG_Kitchen_Thermostat_Battery
-			Text		item=OG_Bath_Thermostat_valve
-					}
-			}
-
-
-
-
-
-
-		Group	item=OG_Living
-			{
-				Group	item=gXtrend		label="TV-Receiver"	icon="receiver"
-				Group	item=gChromecast	label="Chromecast"	icon="chromecast"
-				{
-				Default	item=Chromecast_Music
-				Slider	item=Chromecast_Volume	icon=soundvolume
-				}
-				
-				Group	item=	label="LG-TV"	icon="television-on"{
-				Frame	label="Tv"
-				{
-                                Switch		item=LgTvConnStatus
-                                Switch		item=LgTvPower		mappings=[ON="Power Off"]
-                                Setpoint	item=LgTvChannel	minValue=0 maxValue=300 step=1.0
-                                Setpoint	item=LgTvVolume		minValue=0 maxValue=100 step=1.0
-                                Switch		item=LgTvMute		mappings=[ON="Mute", OFF="Mute"]
-                                Text		item=LgTvChannelName
-                                Selection	item=LgTvChannel	mappings=[1="ORF1",2="ORF2"]
-                                Switch		item=LgTvAppExecute	label="AppExecute" mappings=[Skype=Skype, Spotify=Spotify]
-                                Switch		item=LgTvAppTerminate	label="AppTerminate" mappings=[Skype=Skype, Spotify=Spotify]
-				}}
-			        Group	item=gDenon	label="Denon"	icon="denon_1"
-		
-			}
-
-
-
-
-
-		Group	item=OG_Corridor
-
-
-
-
-		Group	item=OG_Bath
-			{
-			Frame	label="Heizung"{
-			Switch		item=OG_Bath_Thermostat_Mode		mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
-                        Setpoint	item=OG_Bath_Thermostat_set_temp	minValue=4.5 maxValue=32 step=0.5
-                        Text		item=OG_Bath_Thermostat_actual_temp
-                        Switch		item=OG_Bath_Thermostat_Battery
-			Text		item=OG_Bath_Thermostat_valve
-	                Text		item=OG_Bath_Window			label="Badfenster"
-                        Switch		item=OG_Bath_Window_Battery
-				}
-			}
-		}
-		            
-		
-		
-
-			Group	item=gDG	label="Dachgeschoss"	icon="attic"
-	}
-	
-
-
-		Frame	label="Kalender" {
-		Text	item=CurrentDate
-		}
-
-
-	Frame	label="Allgemein" {
-		Group	item=Windows		icon="present"
-		Group	item=actual_temp	label="Aktuelle Raumtemperatur"	icon="temperature"
-		{
-		Frame	label="Obergeschoss"
-			{
-			Text	item=OG_Bath_Thermostat_actual_temp	label="Badtemperatur"
-			Text	item=OG_Kitchen_Thermostat_actual_temp	label="Küchentemperatur"
-			Text	item=OG_Bed_Thermostat_actual_temp	label="Schlafzimmertemperatur"
-			}
-		}
-                Group	item=gSystem	label="Openhab Server status"	icon="pie_chart"
-		 {
-                Frame	label="Arbeitsspeicher (RAM)" {
-                        Text	item=memTotal
-                        Text	item=memUsed
-                        Text	item=memAvailablePercent
+                        Frame   label="Heizung"{
+                        Switch          item=OG_Bed_Thermostat_Mode             mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
+                        Setpoint        item=OG_Bed_Thermostat_set_temp         minValue=4.5 maxValue=32 step=0.5
+                        Text            item=OG_Bed_Thermostat_actual_temp
+                        Switch          item=OG_Bed_Thermostat_Battery
+                        Text            item=OG_Bath_Thermostat_valve
+                        Text            item=OG_Bed_Window                      label="Schlafzimmerfenster"
+                                }
                         }
-                Frame	label="Speicher HDD/SSD/SD" {
-                        Text	item=fileSystemFree
+
+
+                Group   item=OG_Kitchen
+                        {
+
+                        Frame   label="Heizung"{
+                        Switch  item=OG_Kitchen_Thermostat_Mode                 mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
+                        Setpoint        item=OG_Kitchen_Thermostat_set_temp     minValue=4.5 maxValue=32 step=0.5
+                        Text            item=OG_Kitchen_Thermostat_actual_temp
+                        Switch          item=OG_Kitchen_Thermostat_Battery
+                        Text            item=OG_Bath_Thermostat_valve
+                                        }
+                        }
+
+
+
+                Group   item=OG_Living
+                        {
+
+                                Group   item=gXtrend            label="TV-Receiver"     icon="receiver"
+                                Group   item=gChromecast        label="Chromecast"      icon="chromecast"
+                                {
+
+                                Default item=Chromecast_Music
+                                Slider  item=Chromecast_Volume  icon=soundvolume
+                                }
+
+
+
+                                Group   item=   label="LG-TV"   icon="television-on"{
+                                Frame   label="Tv"
+                                {
+                                Switch          item=LgTvConnStatus
+                                Switch          item=LgTvPower          mappings=[ON="Power Off"]
+                                Setpoint        item=LgTvChannel        minValue=0 maxValue=300 step=1.0
+                                Setpoint        item=LgTvVolume         minValue=0 maxValue=100 step=1.0
+                                Switch          item=LgTvMute           mappings=[ON="Mute", OFF="Mute"]
+                                Text            item=LgTvChannelName
+                                Selection       item=LgTvChannel        mappings=[1="ORF1",2="ORF2"]
+                                Switch          item=LgTvAppExecute     label="AppExecute" mappings=[Skype=Skype, Spotify=Spotify]
+                                Switch          item=LgTvAppTerminate   label="AppTerminate" mappings=[Skype=Skype, Spotify=Spotify]
+                                }}
+                                Group   item=gDenon     label="Denon"   icon="denon_1"
+
+                        }
+
+
+
+                Group   item=OG_Corridor
+
+
+
+
+                Group   item=OG_Bath
+                        {
+                        Frame   label="Heizung"{
+                        Switch          item=OG_Bath_Thermostat_Mode            mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
+                        Setpoint        item=OG_Bath_Thermostat_set_temp        minValue=4.5 maxValue=32 step=0.5
+                        Text            item=OG_Bath_Thermostat_actual_temp
+                        Switch          item=OG_Bath_Thermostat_Battery
+                        Text            item=OG_Bath_Thermostat_valve
+                        Text            item=OG_Bath_Window                     label="Badfenster"
+                        Switch          item=OG_Bath_Window_Battery
+                                }
                         }
                 }
-		Group	item=gFritzbox	label="Fritzbox"	icon="avm"{
-			Text	item=fboxName
-			Text	item=fboxWanIP
-			Switch	item=fboxWifi24
-			Switch	item=fboxWifi50
-			Switch	item=fboxGuestWifi
-			Text	item=cFboxMacOnline_Marco
-			Text	item=cFboxMacOnline_Britta			
-		}
-		Group	item=gInetspeed	label="Internetgeschwindigkeit"	icon="internet"{		
-			Text	item=INET_PING
-			Text	item=INET_DOWN
-			Text	item=INET_UP 
-			Text	item=INET_IP
-			Switch	item=INET_CHART_PERIOD label="Zeitspanne" mappings=[0="Stunde", 1="Tag", 2="Woche"]
-			Chart	item=INET_PING period=h	refresh=300	visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
-			Chart	item=INET_PING period=D	refresh=1800	visibility=[INET_CHART_PERIOD==1]
-			Chart	item=INET_PING period=W	refresh=3600	visibility=[INET_CHART_PERIOD==2]
-			Chart	item=INET_DOWN period=h	refresh=300	visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
-			Chart	item=INET_DOWN period=D	refresh=1800	visibility=[INET_CHART_PERIOD==1]
-			Chart	item=INET_DOWN period=W	refresh=3600	visibility=[INET_CHART_PERIOD==2]
-			Chart	item=INET_UP period=h	refresh=300	visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
-			Chart	item=INET_UP period=D	refresh=1800	visibility=[INET_CHART_PERIOD==1]
-			Chart	item=INET_UP period=W	refresh=3600	visibility=[INET_CHART_PERIOD==2]
-		}
-	}
 
 
 
-	Frame	label="Aktuelles Wetter" {
-	Group	item=Coburg	icon="weather_new"{
-		Text item=Temperature_coburg	valuecolor=[>25="red",>15="green",>5="orange",<5="blue"]
-		Text item=Humidity_coburg
-		Text item=Pressure_coburg
-	 }
-	Group	item=Siegen	icon="weather_new"{
-                Text item=Temperature_siegen	valuecolor=[>25="red",>15="green",>5="orange",<5="blue"]
+
+
+
+
+                        Group   item=gDG        label="Dachgeschoss"    icon="attic"
+        }
+
+
+
+                Frame   label="Kalender" {
+                Text    item=CurrentDate
+                }
+
+
+        Frame   label="Allgemein" {
+                Group   item=Windows            icon="present"
+                Group   item=actual_temp        label="Aktuelle Raumtemperatur" icon="temperature"
+                {
+
+                Frame   label="Obergeschoss"
+                        {
+
+                        Text    item=OG_Bath_Thermostat_actual_temp     label="Badtemperatur"
+                        Text    item=OG_Kitchen_Thermostat_actual_temp  label="Küchentemperatur"
+                        Text    item=OG_Bed_Thermostat_actual_temp      label="Schlafzimmertemperatur"
+                        }
+                }
+
+
+                Group   item=gSystem    label="Openhab Server status"   icon="pie_chart"
+                 {
+
+                Frame   label="Arbeitsspeicher (RAM)" {
+                        Text    item=memTotal
+                        Text    item=memUsed
+                        Text    item=memAvailablePercent
+                        }
+                Frame   label="Speicher HDD/SSD/SD" {
+                        Text    item=fileSystemFree
+                        }
+                }
+                Group   item=gFritzbox  label="Fritzbox"        icon="avm"{
+                        Text    item=fboxName
+                        Text    item=fboxWanIP
+                        Switch  item=fboxWifi24
+                        Switch  item=fboxWifi50
+                        Switch  item=fboxGuestWifi
+                        Text    item=cFboxMacOnline_Marco
+                        Text    item=cFboxMacOnline_Britta
+                }
+                Group   item=gInetspeed label="Internetgeschwindigkeit" icon="internet"{
+                        Text    item=INET_PING
+                        Text    item=INET_DOWN
+                        Text    item=INET_UP
+                        Text    item=INET_IP
+                        Switch  item=INET_CHART_PERIOD label="Zeitspanne" mappings=[0="Stunde", 1="Tag", 2="Woche"]
+                        Chart   item=INET_PING period=h refresh=300     visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
+                        Chart   item=INET_PING period=D refresh=1800    visibility=[INET_CHART_PERIOD==1]
+                        Chart   item=INET_PING period=W refresh=3600    visibility=[INET_CHART_PERIOD==2]
+                        Chart   item=INET_DOWN period=h refresh=300     visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
+                        Chart   item=INET_DOWN period=D refresh=1800    visibility=[INET_CHART_PERIOD==1]
+                        Chart   item=INET_DOWN period=W refresh=3600    visibility=[INET_CHART_PERIOD==2]
+                        Chart   item=INET_UP period=h   refresh=300     visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
+                        Chart   item=INET_UP period=D   refresh=1800    visibility=[INET_CHART_PERIOD==1]
+                        Chart   item=INET_UP period=W   refresh=3600    visibility=[INET_CHART_PERIOD==2]
+                }
+        }
+
+
+       Frame   label="Aktuelles Wetter" {
+        Group   item=Coburg     icon="weather_new"{
+                Text item=Temperature_coburg    valuecolor=[>25="red",>15="green",>5="orange",<5="blue"]
+                Text item=Humidity_coburg
+                Text item=Pressure_coburg
+         }
+        Group   item=Siegen     icon="weather_new"{
+                Text item=Temperature_siegen    valuecolor=[>25="red",>15="green",>5="orange",<5="blue"]
                 Text item=Humidity_siegen
                 Text item=Pressure_siegen
 
-	}
-	Group	item=Ebern	icon="weather_new"{
-                Text item=Temperature_ebern	valuecolor=[>25="red",>15="green",>5="orange",<5="blue"]
+
+        }
+
+
+        Group   item=Ebern      icon="weather_new"{
+                Text item=Temperature_ebern     valuecolor=[>25="red",>15="green",>5="orange",<5="blue"]
                 Text item=Humidity_ebern
                 Text item=Pressure_ebern
-	}
-	}
+        }
+        }
+
+
 }
