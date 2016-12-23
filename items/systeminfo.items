@@ -2,7 +2,7 @@
 // System Information
 //
 Group gSystem
-Number memTotal            "Gesamtspeicher [%.1f MB]" 		<ram>  		(gSystem) 	{ channel="systeminfo:computer:server:memory#total" }
-Number memUsed             "Speicher benutzt [%.1f MB]" 	<ram>  		(gSystem) 	{ channel="systeminfo:computer:server:memory#used" }
-Number memAvailablePercent "Speicher verfügbar [%.1f %%]" 	<ram> 		(gSystem) 	{ channel="systeminfo:computer:server:memory#availablePercent" }
-Number fileSystemFree      "Storage frei [%.1f MB]"       	<harddisk_new> 	(gSystem)	{ channel="systeminfo:computer:server:storage#available" }
+Number memTotal            "Gesamtspeicher [%.1f MB]"		<ram>		(gSystem)	{ channel="systeminfo:computer:server:memory#total" }
+Number memUsed             "Speicher benutzt [%.1f MB]"		<ram>		(gSystem)	{ channel="systeminfo:computer:server:memory#used" }
+Number memAvailablePercent "Speicher verfügbar [%.1f %%]"	<ram>		(gSystem)	{ channel="systeminfo:computer:server:memory#availablePercent" }
+Number fileSystemFree      "Storage frei [%.1f MB]"		<harddisk_new>	(gSystem)	{ channel="systeminfo:computer:server:storage#available" }

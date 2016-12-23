@@ -1,16 +1,19 @@
-        Group   gOG        	"Obergeschoss"  <groundfloor>
-        Group   gDG        	"Dachgeschoss"  <firstfloor>
-        Group   gWeather   	"Wetter"        <weather>
-  
+        Group   gOG		"Obergeschoss"  <groundfloor>
+        Group   gDG		"Dachgeschoss"  <firstfloor>
+        Group   gWeather	"Wetter"        <weather>
+
+
+	Group	Temperature
+	Group	Actual_Temp  
         Group   Window_Sensor
-	Group 	Contact
+	Group	Contact
 
         Group   OG_Bath         "Bad"           <bath>          ( gOG )
         Group   OG_Kitchen      "Küche"         <kitchen>       ( gOG )
-        Group   OG_Living       "Wohnzimmer"    <sofa>        	( gOG )
+        Group   OG_Living       "Wohnzimmer"    <sofa>		( gOG )
         Group   OG_Bed          "Schlafzimmer"  <bedroom>       ( gOG )
         Group   OG_Corridor     "Gang"          <corridor>      ( gOG )
         Group   DG_Corridor     "Gang"          <corridor>      ( gDG )
         Group   DG_Guest        "Gästezimmer"   <guest_room>    ( gDG )
-        Group   DG_WC           "WC"            <wc>          	( gDG )
+        Group   DG_WC           "WC"            <wc>		( gDG )
         Group   DG_pc           "Arbeitszimmer" <workroom_1>    ( gDG )

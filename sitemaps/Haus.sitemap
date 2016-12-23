@@ -1,4 +1,4 @@
-sitemap Haus    label="Hausverwaltung"
+#sitemap Haus    label="Hausverwaltung"
 {
         Frame {
                 Group    item=gOG        label="Obergeschoss"    icon="firstfloor"
@@ -11,9 +11,10 @@ sitemap Haus    label="Hausverwaltung"
                         Switch          item=OG_Bed_Thermostat_Mode             mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
                         Setpoint        item=OG_Bed_Thermostat_set_temp         minValue=4.5 maxValue=32 step=0.5
                         Text            item=OG_Bed_Thermostat_actual_temp
-                        Switch          item=OG_Bed_Thermostat_Battery
-                        Text            item=OG_Bath_Thermostat_valve
-                        Text            item=OG_Bed_Window                      label="Schlafzimmerfenster"
+                        Text	        item=OG_Bed_Thermostat_Battery
+                        Text            item=OG_Bed_Thermostat_valve
+                        Text            item=OG_Bed_Window
+                        Text		item=OG_Bed_Window_Battery
                                 }
                         }
 
@@ -22,11 +23,11 @@ sitemap Haus    label="Hausverwaltung"
                         {
 
                         Frame   label="Heizung"{
-                        Switch  item=OG_Kitchen_Thermostat_Mode                 mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
+                        Switch		item=OG_Kitchen_Thermostat_Mode                 mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
                         Setpoint        item=OG_Kitchen_Thermostat_set_temp     minValue=4.5 maxValue=32 step=0.5
                         Text            item=OG_Kitchen_Thermostat_actual_temp
-                        Switch          item=OG_Kitchen_Thermostat_Battery
-                        Text            item=OG_Bath_Thermostat_valve
+                        Text	        item=OG_Kitchen_Thermostat_Battery
+                        Text            item=OG_Kitchen_Thermostat_valve
                                         }
                         }
 
@@ -65,8 +66,9 @@ sitemap Haus    label="Hausverwaltung"
 
 
                 Group   item=OG_Corridor
-
-
+		{
+		Text label="no components yet"
+		}
 
 
                 Group   item=OG_Bath
@@ -75,10 +77,11 @@ sitemap Haus    label="Hausverwaltung"
                         Switch          item=OG_Bath_Thermostat_Mode            mappings=[AUTOMATIC=AUTOMATIC, MANUAL=MANUAL, BOOST=BOOST]
                         Setpoint        item=OG_Bath_Thermostat_set_temp        minValue=4.5 maxValue=32 step=0.5
                         Text            item=OG_Bath_Thermostat_actual_temp
-                        Switch          item=OG_Bath_Thermostat_Battery
+                        Text	        item=OG_Bath_Thermostat_Battery
                         Text            item=OG_Bath_Thermostat_valve
-                        Text            item=OG_Bath_Window                     label="Badfenster"
-                        Switch          item=OG_Bath_Window_Battery
+                        Text            item=OG_Bath_Window
+                        Text		item=OG_Bath_Window_Battery
+			Text		item=OG_Bath_Window1
                                 }
                         }
                 }
@@ -100,18 +103,15 @@ sitemap Haus    label="Hausverwaltung"
 
 
         Frame   label="Allgemein" {
-                Group   item=Windows            icon="present"
-                Group   item=actual_temp        label="Aktuelle Raumtemperatur" icon="temperature"
-                {
+                Group   item=Windows			icon="present"
+ 		Group   item=""      label="Aktuelle Temperatur"              icon="temperature" {
+			Text	item=OG_Bath_Thermostat_actual_temp	label="Badtemperatur"
+			Text	item=OG_Kitchen_Thermostat_actual_temp	label="Küchentemperatur"
+			Text	item=OG_Bed_Thermostat_actual_temp	label="Schlafzimmertemperatur"
+			Webview url="/static/actual_temp.html"		height=13
+			}
 
-                Frame   label="Obergeschoss"
-                        {
-
-                        Text    item=OG_Bath_Thermostat_actual_temp     label="Badtemperatur"
-                        Text    item=OG_Kitchen_Thermostat_actual_temp  label="Küchentemperatur"
-                        Text    item=OG_Bed_Thermostat_actual_temp      label="Schlafzimmertemperatur"
-                        }
-                }
+                
 
 
                 Group   item=gSystem    label="Openhab Server status"   icon="pie_chart"
@@ -140,17 +140,9 @@ sitemap Haus    label="Hausverwaltung"
                         Text    item=INET_DOWN
                         Text    item=INET_UP
                         Text    item=INET_IP
-                        Switch  item=INET_CHART_PERIOD label="Zeitspanne" mappings=[0="Stunde", 1="Tag", 2="Woche"]
-                        Chart   item=INET_PING period=h refresh=300     visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
-                        Chart   item=INET_PING period=D refresh=1800    visibility=[INET_CHART_PERIOD==1]
-                        Chart   item=INET_PING period=W refresh=3600    visibility=[INET_CHART_PERIOD==2]
-                        Chart   item=INET_DOWN period=h refresh=300     visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
-                        Chart   item=INET_DOWN period=D refresh=1800    visibility=[INET_CHART_PERIOD==1]
-                        Chart   item=INET_DOWN period=W refresh=3600    visibility=[INET_CHART_PERIOD==2]
-                        Chart   item=INET_UP period=h   refresh=300     visibility=[INET_CHART_PERIOD==0, INET_CHART_PERIOD=="Uninitialized"]
-                        Chart   item=INET_UP period=D   refresh=1800    visibility=[INET_CHART_PERIOD==1]
-                        Chart   item=INET_UP period=W   refresh=3600    visibility=[INET_CHART_PERIOD==2]
-                }
+                        Webview url="/static/inet.html" height=13
+
+		}
         }
 
 

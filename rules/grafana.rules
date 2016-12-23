@@ -1,0 +1,7 @@
+rule "Initialize values"
+when
+	System started
+then
+	Grafana_Actual_Temperature_Panel.postUpdate("TEMPERATURE")
+	Grafana_Actual_Temperature_From.postUpdate("DAY")
+end

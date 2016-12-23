@@ -1,24 +1,26 @@
-Switch OG_Bath_Thermostat_Battery 		"Battery Low" 					<battery>		(Temperature, OG_Bath) 			{channel="max:thermostat:NEQ1207124:MKF0059159:battery_low"}
-String OG_Bath_Thermostat_Mode    		"Thermostat Modus" 				<climate>		(Temperature, OG_Bath) 			{channel="max:thermostat:NEQ1207124:MKF0059159:mode"}
-Number OG_Bath_Thermostat_actual_temp  		"Aktuelle Raumtermperatur  [%.1f °C]" 		<temperature>		(Temperature, OG_Bath, Actual_Temp) 	{channel="max:thermostat:NEQ1207124:MKF0059159:actual_temp"}
-Number OG_Bath_Thermostat_set_temp 		"Gesetzte Raumtemperatur [%.1f °C]"		<temperature>  		(Temperature, OG_Bath) 			{channel="max:thermostat:NEQ1207124:MKF0059159:set_temp"}
-Number OG_Bath_Thermostat_valve			"Ventilöffnung"					<heating>		(Temperature, OG_Bath)			{channel="max:thermostat:NEQ1207124:MKF0059159:valve"}
+Number OG_Bath_Thermostat_Battery		"Battery ist [MAP(max_battery.map):%s]"			<battery>		(Temperature, OG_Bath)			{channel="max:thermostat:NEQ1207124:MKF0059159:battery_low"}
+String OG_Bath_Thermostat_Mode			"Thermostat Modus"					<climate>		(Temperature, OG_Bath)			{channel="max:thermostat:NEQ1207124:MKF0059159:mode"}
+Number OG_Bath_Thermostat_actual_temp		"Aktuelle Raumtermperatur  [%.1f °C]"			<temperature>		(Temperature, OG_Bath, Actual_Temp)	{channel="max:thermostat:NEQ1207124:MKF0059159:actual_temp"}
+Number OG_Bath_Thermostat_set_temp		"Gesetzte Raumtemperatur [%.1f °C]"			<temperature>		(Temperature, OG_Bath)			{channel="max:thermostat:NEQ1207124:MKF0059159:set_temp"}
+Number OG_Bath_Thermostat_valve			"Ventilöffnung"						<heating>		(Temperature, OG_Bath)			{channel="max:thermostat:NEQ1207124:MKF0059159:valve"}
 
-Switch OG_Kitchen_Thermostat_Battery       	"Battery Low"                                   <battery>		(Temperature, OG_Kitchen)            	{channel="max:thermostat:NEQ1207124:MKF0047491:battery_low"}
-String OG_Kitchen_Thermostat_Mode          	"Thermostat Modus"                       	<climate>		(Temperature, OG_Kitchen)            	{channel="max:thermostat:NEQ1207124:MKF0047491:mode"}
-Number OG_Kitchen_Thermostat_actual_temp   	"Aktuelle Raumtemperatur  [%.1f °C]"   		<temperature>		(Temperature, OG_Kitchen, Actual_Temp)  {channel="max:thermostat:NEQ1207124:MKF0047491:actual_temp"}
-Number OG_Kitchen_Thermostat_set_temp      	"Gesetzte Raumtemperatur [%.1f °C]"     	<temperature>		(Temperature, OG_Kitchen)            	{channel="max:thermostat:NEQ1207124:MKF0047491:set_temp"}
-Number OG_Kitchen_Thermostat_valve         	"Ventilöffnung                               	<heating>     		(Temperature, OG_Kitchen)		{channel="max:thermostat:NEQ1207124:MKF0047491:valve"}
+Number OG_Kitchen_Thermostat_Battery		"Battery ist [MAP(max_battery.map):%s]"			<battery>		(Temperature, OG_Kitchen)		{channel="max:thermostat:NEQ1207124:MKF0047491:battery_low"}
+String OG_Kitchen_Thermostat_Mode		"Thermostat Modus"					<climate>		(Temperature, OG_Kitchen)		{channel="max:thermostat:NEQ1207124:MKF0047491:mode"}
+Number OG_Kitchen_Thermostat_actual_temp	"Aktuelle Raumtemperatur  [%.1f °C]"			<temperature>		(Temperature, OG_Kitchen, Actual_Temp)  {channel="max:thermostat:NEQ1207124:MKF0047491:actual_temp"}
+Number OG_Kitchen_Thermostat_set_temp		"Gesetzte Raumtemperatur [%.1f °C]"			<temperature>		(Temperature, OG_Kitchen)		{channel="max:thermostat:NEQ1207124:MKF0047491:set_temp"}
+Number OG_Kitchen_Thermostat_valve		"Ventilöffnung"						<heating>		(Temperature, OG_Kitchen)		{channel="max:thermostat:NEQ1207124:MKF0047491:valve"}
 
-Switch OG_Bed_Thermostat_Battery       		"Battery Low"                                   <battery>		(Temperature, OG_Bed)		        {channel="max:thermostat:NEQ1207124:MKF0047490:battery_low"}
-String OG_Bed_Thermostat_Mode          		"Thermostat Modus"  				<climate>  	       	(Temperature, OG_Bed)			{channel="max:thermostat:NEQ1207124:MKF0047490:mode"}
-Number OG_Bed_Thermostat_actual_temp   		"Aktuelle Raumtemperatur  [%.1f °C]" 		<temperature>   	(Temperature, OG_Bed, Actual_Temp)      {channel="max:thermostat:NEQ1207124:MKF0047490:actual_temp"}
-Number OG_Bed_Thermostat_set_temp      		"Gesetzte Raumtemperatur [%.1f °C]"	 	<temperature>     	(Temperature, OG_Bed)            	{channel="max:thermostat:NEQ1207124:MKF0047490:set_temp"}
-Number OG_Bed_Thermostat_valve         		"Ventilöffnung"                                 <heating>    		(Temperature, OG_Bed)            	{channel="max:thermostat:NEQ1207124:MKF0047490:valve"}
+Number OG_Bed_Thermostat_Battery		"Battery ist [MAP(max_battery.map):%s]"			<battery>		(Temperature, OG_Bed)		        {channel="max:thermostat:NEQ1207124:MKF0047490:battery_low"}
+String OG_Bed_Thermostat_Mode			"Thermostat Modus"					<climate>		(Temperature, OG_Bed)			{channel="max:thermostat:NEQ1207124:MKF0047490:mode"}
+Number OG_Bed_Thermostat_actual_temp		"Aktuelle Raumtemperatur  [%.1f °C]"			<temperature>		(Temperature, OG_Bed, Actual_Temp)      {channel="max:thermostat:NEQ1207124:MKF0047490:actual_temp"}
+Number OG_Bed_Thermostat_set_temp		"Gesetzte Raumtemperatur [%.1f °C]"			<temperature>		(Temperature, OG_Bed)			{channel="max:thermostat:NEQ1207124:MKF0047490:set_temp"}
+Number OG_Bed_Thermostat_valve			"Ventilöffnung"		                                <heating>		(Temperature, OG_Bed)			{channel="max:thermostat:NEQ1207124:MKF0047490:valve"}
 
 
-Contact OG_Bed_Window                  		"Schlafzimmerfenster ist [%s]"                  <contact>               (Window_Sensor, OG_Bed, Contact) 	{channel="max:shuttercontact:NEQ1207124:NEQ0850782:contact_state"}
-Switch OG_Bed_Window_Battery           		"Schlafzimmerfenster_Batterie [%s]"             <battery>               (Window_Sensor, OG_Bed) 	 	{channel="max:shuttercontact:NEQ1207124:NEQ0850782:battery_low"}
+Contact OG_Bed_Window				"Schlafzimmerfenster ist [MAP(max.map):%s]"		<contact>               (Window_Sensor, OG_Bed, Contact)	{channel="max:shuttercontact:NEQ1207124:NEQ0850782:contact_state"}
+Switch	OG_Bed_Window_Battery			"Schlafzimmerfenster_Batterie [MAP(max_battery.map):%s]" <battery>               (Window_Sensor, OG_Bed)			{channel="max:shuttercontact:NEQ1207124:NEQ0850782:battery_low"}
 
-Contact OG_Bath_Window 				"Badfenster ist [MAP(max.map):%d]"		<contact>		(Window_Sensor, OG_Bath, Contact) 	{channel="max:shuttercontact:NEQ1207124:NEQ0846206:contact_state"}
-Contact OG_Bath_Window_Battery          	"Badfenster_Batterie [MAP(max_battery.map):%s]" <battery>               (Window_Sensor, OG_Bath) 	 	{channel="max:shuttercontact:NEQ1207124:NEQ0846206:battery_low"}
+Contact OG_Bath_Window				"Badfenster ist [MAP(max.map):%d]"			<contact>		(Window_Sensor, OG_Bed, Contact)	{channel="max:shuttercontact:NEQ1207124:NEQ0846206:contact_state"}
+Switch	OG_Bath_Window_Battery			"Badfenster_Batterie [MAP(max_battery.map):%s]"		<battery>               (Window_Sensor, OG_Bath)		{channel="max:shuttercontact:NEQ1207124:NEQ0846206:battery_low"}
+Contact OG_Bath_Window1                         "Badfenster ist [MAP(max.map):%s]"			<contact>               (Window_Sensor, OG_Bed, Contact)        {channel="max:shuttercontact:NEQ1207124:NEQ0846206:contact_state"}
+

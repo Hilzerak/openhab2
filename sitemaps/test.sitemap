@@ -1,0 +1,6 @@
+#sitemap Test    label="Test"
+
+                        Frame   label="Heizung"{
+                        Text            item=OG_Bed_Window
+                                }
+

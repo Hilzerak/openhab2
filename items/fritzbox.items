@@ -1,26 +1,26 @@
 Group gFritzbox
-String  fboxName            	"FBox Modell [%s]"     				<avm>		( gFritzbox )  		{fritzboxtr064="modelName"}
-String  fboxWanIP           	"FBox WAN IP [%s]"          			<icon_ip>	( gFritzbox )		{fritzboxtr064="wanip"}
-Switch  fboxWifi24          	"2,4GHz Wlan"              					( gFritzbox )		{fritzboxtr064="wifi24Switch"}
-Switch  fboxWifi50          	"5,0GHz Wlan"               					( gFritzbox )		{fritzboxtr064="wifi50Switch"}
-Switch  fboxGuestWifi       	"Gästewlan"                					( gFritzbox )		{fritzboxtr064="wifiGuestSwitch"}
-Contact cFboxMacOnline_Marco    "Marco ist (WiFi) [MAP(fritzbox.map):%d]"  	<man_3>		( gFritzbox )		{fritzboxtr064="maconline:d0-22-be-6c-55-54" }
-Contact cFboxMacOnline_Britta   "Britta ist (WiFi) [MAP(fritzbox.map):%d]" 	<girl_2>	( gFritzbox )           {fritzboxtr064="maconline:e8-92-a4-90-3a-ae" }
+String  fboxName		"FBox Modell [%s]"				<avm>		( gFritzbox )		{fritzboxtr064="modelName"}
+String  fboxWanIP		"FBox WAN IP [%s]"				<icon_ip>	( gFritzbox )		{fritzboxtr064="wanip"}
+Switch  fboxWifi24		"2,4GHz Wlan"							( gFritzbox )		{fritzboxtr064="wifi24Switch"}
+Switch  fboxWifi50		"5,0GHz Wlan"							( gFritzbox )		{fritzboxtr064="wifi50Switch"}
+Switch  fboxGuestWifi		"Gästewlan"							( gFritzbox )		{fritzboxtr064="wifiGuestSwitch"}
+Contact cFboxMacOnline_Marco    "Marco ist (WiFi) [MAP(fritzbox.map):%d]"	<man_3>		( gFritzbox )		{fritzboxtr064="maconline:d0-22-be-6c-55-54" }
+Contact cFboxMacOnline_Britta   "Britta ist (WiFi) [MAP(fritzbox.map):%d]"	<girl_2>	( gFritzbox )           {fritzboxtr064="maconline:e8-92-a4-90-3a-ae" }
 
 
 # only when using call monitor
-Switch  fboxRinging         	"Telefon klingelt [%s]"                				( gFritzbox )		{fritzboxtr064="callmonitor_ringing" }
-Call    fboxIncomingCall    	"Eingehender Anruf: [%1$s to %2$s]"     			( gFritzbox )		{fritzboxtr064="callmonitor_ringing" } 
-Call    fboxOutgoingCall    	"Ausgehender Anruf: [%1$s to %2$s]"     			( gFritzbox )		{fritzboxtr064="callmonitor_outgoing" }
+Switch  fboxRinging		"Telefon klingelt [%s]"						( gFritzbox )		{fritzboxtr064="callmonitor_ringing" }
+Call    fboxIncomingCall	"Eingehender Anruf: [%1$s to %2$s]"				( gFritzbox )		{fritzboxtr064="callmonitor_ringing" } 
+Call    fboxOutgoingCall	"Ausgehender Anruf: [%1$s to %2$s]"				( gFritzbox )		{fritzboxtr064="callmonitor_outgoing" }
 
 # resolve numbers to names according phonebook
-Call    fboxIncomingCallResolved    "Eingehender Anruf: [%1$s to %2$s]"     			( gFritzbox )		{fritzboxtr064="callmonitor_ringing:resolveName" } 
+Call    fboxIncomingCallResolved    "Eingehender Anruf: [%1$s to %2$s]"				( gFritzbox )		{fritzboxtr064="callmonitor_ringing:resolveName" } 
 
 # Telephone answering machine (TAM) items
 # Number after tamSwitch is ID of configured TAM, start with 0
-Switch  fboxTAM0Switch   	"Answering machine ID 0"       					( gFritzbox )		{fritzboxtr064="tamSwitch:0"}
-Number  fboxTAM0NewMsg   	"Neue Nachrichten TAM 0 [%s]"      				( gFritzbox )		{fritzboxtr064="tamNewMessages:0"}
+Switch  fboxTAM0Switch		"Answering machine ID 0"					( gFritzbox )		{fritzboxtr064="tamSwitch:0"}
+Number  fboxTAM0NewMsg		"Neue Nachrichten TAM 0 [%s]"					( gFritzbox )		{fritzboxtr064="tamNewMessages:0"}
 
 # Missed calls: specify the number of last days which should be searched for missed calls
-Number  fboxMissedCalls     	"Verpasste Anrufe [%s]"         				( gFritzbox )		{ fritzboxtr064="missedCallsInDays:2" }
+Number  fboxMissedCalls		"Verpasste Anrufe [%s]"						( gFritzbox )		{ fritzboxtr064="missedCallsInDays:2" }
 

@@ -15,9 +15,9 @@ else
 fi
  
  
-/usr/bin/curl -s --header "Content-Type: text/plain"  --request POST --data $PING https://xxx/rest/items/INET_PING
-/usr/bin/curl -s --header "Content-Type: text/plain"  --request POST --data $DOWN https://xxx/rest/items/INET_DOWN
-/usr/bin/curl -s --header "Content-Type: text/plain"  --request POST --data $UP https://xxx/rest/items/INET_UP
-/usr/bin/curl -s --header "Content-Type: text/plain"  --request POST --data $IP https://xxx/rest/items/INET_IP
+/usr/bin/curl -s --header "Content-Type: text/plain"  --request POST --data $PING https:///rest/items/INET_PING
+/usr/bin/curl -s --header "Content-Type: text/plain"  --request POST --data $DOWN https:///rest/items/INET_DOWN
+/usr/bin/curl -s --header "Content-Type: text/plain"  --request POST --data $UP https:///rest/items/INET_UP
+/usr/bin/curl -s --header "Content-Type: text/plain"  --request POST --data $IP https:///rest/items/INET_IP
  
 rm -f /etc/openhab2/scripts/tmp/speedresult.txt

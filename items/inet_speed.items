@@ -1,6 +1,6 @@
 Group gInetspeed
 Number INET_CHART_PERIOD
-Number INET_PING 	"Ping [%.1f ms]" 		<ping_icon>		( gInetspeed )
-Number INET_DOWN 	"Download [%.1f Mbit/s]" 	<install>		( gInetspeed )
-Number INET_UP 		"Upload [%.1f Mbit/s]" 		<remove>		( gInetspeed )
-String INET_IP 		"akt. IP-Adresse: [%s]" 	<icon_ip>		( gInetspeed )
+Number INET_PING	"Ping [%.1f ms]"		<ping_icon>		( gInetspeed )
+Number INET_DOWN	"Download [%.1f Mbit/s]"	<install>		( gInetspeed )
+Number INET_UP		"Upload [%.1f Mbit/s]"		<remove>		( gInetspeed )
+String INET_IP		"akt. IP-Adresse: [%s]"		<icon_ip>		( gInetspeed )

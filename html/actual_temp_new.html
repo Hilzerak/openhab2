@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" CONTENT="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="charts.css" />
+    <script src="smarthome-grafana.js"></script>
+    <script src="smarthome-grafana-user-defaults.js"></script>
+</head>
+
+<body>
+<center>
+</center>
+
+</body>
+
+<script>
+  var fromItemFunction = function(value) {
+        switch (value) {
+            case "HOUR": 
+                return "now-1h";
+            case "DAY":
+                return "now-1d";
+            default: 
+            case "WEEK":
+                return "now-1w";
+            case "MONTH":
+                return "now-1M";
+            case "YEAR":
+                return "now-1y";
+        }
+    }
+    var panelItemFunction = function(value) {
+        switch (value) {
+            case "Aussentemperatur": 
+                return "2";
+            case "VENTILOEFFNUNG":
+                return "4";
+            default: 
+            case "TEMPERATURE":
+                return "3";
+        }
+    }
+    addGrafanaPanel("actual_temperature", {
+        fromItemFunction: fromItemFunction,
+        panelItemFunction: panelItemFunction
+    });
+</script>
+
+
+
+</html>

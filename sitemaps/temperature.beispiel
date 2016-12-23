@@ -1,0 +1,7 @@
+                        Frame label="Aktuelle Temperatur" {
+                        Switch item=Grafana_Actual_Temperature_Panel mappings=[Aussentemperatur="Aussentemp", VENTILOEFFNUNG="VENTILOEFFNUNG", TEMPERATURE="TEMPERATUR"]
+                        Switch item=Grafana_Actual_Temperature_From mappings=[HOUR="Hour", DAY="Day", WEEK="Week", MONTH="Month", YEAR="Year"]
+                        Webview url="/static/actual_temp_new.html?dashboard=Temperatur&fromItem=Grafana_Actual_Temperature_From&panelItem=Grafana_Actual_Temperature_Panel" height=12
+
+                                }
+
